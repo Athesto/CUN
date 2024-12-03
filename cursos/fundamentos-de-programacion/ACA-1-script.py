@@ -35,17 +35,19 @@ def solution_3b():
 def solution_3c(number):
     if number == 0:
         return 1
-    return number * solution_3c(number - 1)
+    for i in range(1, number):
+        number *= i
+    return number
 
 # Ejercicio 3d: tabla de multiplicar
 def solution_3d():
     x = 1
     y = 0
     while x <= 10:
+        print("")
         while y <= 10:
             print(f"{x:02} x {y:02} = {x*y:3}")
             y += 1
-        print("")
         x += 1
         y = 0
 
@@ -73,9 +75,8 @@ class Tests(unittest.TestCase):
         self.assertEqual(solution_3c(0), 1)
 
     def test_3d(self):
-        print()
         self.assertEqual(solution_3d(), None)
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(exit=False)
