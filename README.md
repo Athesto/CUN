@@ -5,7 +5,7 @@ Este repositorio recopila las actividades y los entregables que se realizarán e
 ## Materias
 
 - [CATEDRA DE PENSAMIENTO CUNISTA I]
-- [FUNDAMENTOS DE PROGRAMACION]
+- [FUNDAMENTOS DE PROGRAMACION](./cursos/fundamentos-de-programacion/README.md)
 - [INFORMATICA Y CONVERGENCIA TECNOLOGICA]
 - [LOGICA PARA ESCUELA DE INGENIERIAS]
 - [CIRCUITOS BASICOS Y LABORATORIO]
