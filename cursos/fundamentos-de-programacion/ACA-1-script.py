@@ -41,15 +41,15 @@ def solution_3c(number):
 
 # Ejercicio 3d: tabla de multiplicar
 def solution_3d():
-    x = 1
-    y = 0
-    while x <= 10:
+    multiplier = 1
+    multiplicand = 0
+    while multiplier <= 10:
         print("")
-        while y <= 10:
-            print(f"{x:02} x {y:02} = {x*y:3}")
-            y += 1
-        x += 1
-        y = 0
+        while multiplicand <= 10:
+            print(f"{multiplier:02} x {multiplicand:02} = {multiplier*multiplicand:3}")
+            multiplicand += 1
+        multiplicand = 0
+        multiplier += 1
 
 class Tests(unittest.TestCase):
     @patch('builtins.input', side_effect=['1', '0', '-1'])
