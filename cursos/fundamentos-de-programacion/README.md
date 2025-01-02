@@ -1,5 +1,8 @@
 # **Actividad de Construcción Aplicada (ACA)**
 
+## **Documento para descargar**
+[Link a Google Drive](https://docs.google.com/document/d/1Zvc7S0pE46XbeI_AzB634Ag42bVbHRhuoOwTgJTJ2dw/edit?usp=sharing)
+
 ## **Autores**
 - **Gustavo Adolfo Mejía Sánchez**
 - **Pedro Pérez**
