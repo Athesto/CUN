@@ -5,10 +5,18 @@ from unittest.mock import patch
 
 # Ejercicio 3a: Determinar si el numero es positivo, cero o negativo
 def solution_3a():
-    item = input("Enter a number: ")
-    if int(item) > 0:
+    data_input = input("Enter a number: ")
+    try:
+        number = float(data_input)
+    except ValueError:
+        # Si no se puede convertir a número, determinar si es texto o algo más
+        if number.isalpha():
+            print("Error: You entered a string: '" + number + "' Expected a number.")
+        else:
+            print("Error: You entered something else: '" + number + "' Expected a number.")
+    if number > 0:
         return 'positive'
-    elif int(item) == 0:
+    elif number == 0:
         return 'zero'
     return 'negative'
 
@@ -24,8 +32,14 @@ def solution_3b():
         message = "Peso normal"
     elif imc < 30:
         message = "Sobrepeso"
+    elif imc < 34.9:
+        message = "Obesidad I"
+    elif imc < 39.9:
+        message = "Obesidad II"
+    elif imc < 49.9:
+        message = "Obesidad III"
     else:
-        message = "Obesidad"
+        message = "Obesidad IV"
     return {
         'imc': imc,
         'message': message
@@ -68,7 +82,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(solution_3b(), {'imc': 15.0, 'message': 'Bajo peso'})
         self.assertEqual(solution_3b(), {'imc': 20.0, 'message': 'Peso normal'})
         self.assertEqual(solution_3b(), {'imc': 25.0, 'message': 'Sobrepeso'})
-        self.assertEqual(solution_3b(), {'imc': 40.0, 'message': 'Obesidad'})
+        self.assertEqual(solution_3b(), {'imc': 40.0, 'message': 'Obesidad III'})
 
     def test_3c(self):
         self.assertEqual(solution_3c(5), 120)
