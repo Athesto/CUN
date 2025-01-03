@@ -23,13 +23,13 @@ def classify_number():
 
 # Ejercicio 3b: Determinar el IMC
 def get_imc():
-    try: 
+    try:
         weight = float(input("Peso (kg): "))
         height = float(input("Altura (m): "))
         imc = "{:.2f}".format(weight / height**2)
         imc = float(imc)
     except ValueError:
-        print("Error: You entered something else:") 
+        print("Error: You entered something else:")
         return "Error"
 
     if imc < 18.5:
@@ -52,12 +52,22 @@ def get_imc():
     }
 
 # Ejercicio 3c: Calcular el factorial de un numero
-def get_factorial(number):
-    if number == 0:
-        return 1
-    for i in range(1, number):
-        number *= i
-    return number
+def get_factorial():
+    try:
+        number = int(input("Enter an Integer: "))
+    except ValueError:
+        print("Error: The input must be an integer.")
+        return "Error"
+
+    if number < 0:
+        print("Error: The input must be a non-negative integer.")
+        return "Error"
+
+    factorial = 1
+    for i in range(1, number + 1):
+        factorial *= i
+
+    return factorial
 
 # Ejercicio 3d: tabla de multiplicar
 def mutiplication_table():
@@ -73,7 +83,7 @@ def mutiplication_table():
 
 class Tests(unittest.TestCase):
     @patch('builtins.input', side_effect=['1', '0', '-1', "hello world"])
-    def test_3a(self, mock_input):
+    def test_classify_number(self, mock_input):
         self.assertEqual(classify_number(), 'positive')
         self.assertEqual(classify_number(), 'zero')
         self.assertEqual(classify_number(), 'negative')
@@ -86,18 +96,22 @@ class Tests(unittest.TestCase):
         '160', '2',
         "hello world", "2",
     ])
-    def test_3b(self, mock_input):
+    def test_get_imc(self, mock_input):
         self.assertEqual(get_imc(), {'imc': 15.0, 'message': 'Bajo peso'})
         self.assertEqual(get_imc(), {'imc': 20.0, 'message': 'Peso normal'})
         self.assertEqual(get_imc(), {'imc': 25.0, 'message': 'Sobrepeso'})
         self.assertEqual(get_imc(), {'imc': 40.0, 'message': 'Obesidad III'})
-        self.assertEqual(get_imc(), "Error") 
+        self.assertEqual(get_imc(), "Error")
 
-    def test_3c(self):
-        self.assertEqual(get_factorial(5), 120)
-        self.assertEqual(get_factorial(0), 1)
+    @patch('builtins.input', side_effect=[5, 0, 1, -1, "hello world"])
+    def test_get_factorial(self, mock_input):
+        self.assertEqual(get_factorial(), 120)
+        self.assertEqual(get_factorial(), 1)
+        self.assertEqual(get_factorial(), 1)
+        self.assertEqual(get_factorial(), 'Error')
+        self.assertEqual(get_factorial(), 'Error')
 
-    def test_3d(self):
+    def test_multiplication_table(self):
         self.assertEqual(mutiplication_table(), None)
 
 
