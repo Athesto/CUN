@@ -10,10 +10,11 @@ def solution_3a():
         number = float(data_input)
     except ValueError:
         # Si no se puede convertir a número, determinar si es texto o algo más
-        if number.isalpha():
-            print("Error: You entered a string: '" + number + "' Expected a number.")
+        if data_input.isalpha():
+            print("Error: You entered a string: '" + data_input + "' Expected a number.")
         else:
-            print("Error: You entered something else: '" + number + "' Expected a number.")
+            print("Error: You entered something else: '" + data_input + "' Expected a number.")
+        return 'Error'
     if number > 0:
         return 'positive'
     elif number == 0:
@@ -22,10 +23,15 @@ def solution_3a():
 
 # Ejercicio 3b: Determinar el IMC
 def solution_3b():
-    weight = float(input("Peso (kg): "))
-    height = float(input("Altura (m): "))
-    imc = "{:.2f}".format(weight / height**2)
-    imc = float(imc)
+    try: 
+        weight = float(input("Peso (kg): "))
+        height = float(input("Altura (m): "))
+        imc = "{:.2f}".format(weight / height**2)
+        imc = float(imc)
+    except ValueError:
+        print("Error: You entered something else:") 
+        return "Error"
+
     if imc < 18.5:
         message = 'Bajo peso'
     elif imc < 25:
@@ -66,23 +72,26 @@ def solution_3d():
         multiplier += 1
 
 class Tests(unittest.TestCase):
-    @patch('builtins.input', side_effect=['1', '0', '-1'])
+    @patch('builtins.input', side_effect=['1', '0', '-1', "hello world"])
     def test_3a(self, mock_input):
         self.assertEqual(solution_3a(), 'positive')
         self.assertEqual(solution_3a(), 'zero')
         self.assertEqual(solution_3a(), 'negative')
+        self.assertEqual(solution_3a(), 'Error')
 
     @patch('builtins.input', side_effect=[
         '60', '2',
         '80', '2',
         '100', '2',
         '160', '2',
+        "hello world", "2",
     ])
     def test_3b(self, mock_input):
         self.assertEqual(solution_3b(), {'imc': 15.0, 'message': 'Bajo peso'})
         self.assertEqual(solution_3b(), {'imc': 20.0, 'message': 'Peso normal'})
         self.assertEqual(solution_3b(), {'imc': 25.0, 'message': 'Sobrepeso'})
         self.assertEqual(solution_3b(), {'imc': 40.0, 'message': 'Obesidad III'})
+        self.assertEqual(solution_3b(), "Error") 
 
     def test_3c(self):
         self.assertEqual(solution_3c(5), 120)
