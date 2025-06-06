@@ -2,7 +2,7 @@
 ## Contenido 1: Historia y Evolución de lasComputadoras:
 > Un Viaje Fascinante a través de las Generaciones Tecnológicas
 
-Esta presentación se sumerge en la historia y evoluciónde las computadoras, desde las primeras máquinas mecánicas hasta las innovadoras computadoras cuánticasde la actualidad. Exploraremos las distintasgeneraciones y su impacto en la ingenieríade sistemas, revelando cómo cada avance tecnológico hamoldeado el mundo de la informática
+Esta presentación se sumerge en la historia y evoluciónde las computadoras, desde las primeras máquinas mecánicas hasta las innovadoras computadoras cuánticasde la actualidad. Exploraremos las distintas generaciones y su impacto en la ingenieríade sistemas, revelando cómo cada avance tecnológico hamoldeado el mundo de la informática
 
 ### Primera Generación: Tubos de Vacío
 #### ENIAC y las Primeras Computadoras
@@ -12,7 +12,7 @@ La primera generación de computadoras introdujo las máquinas basadas en tubos 
 Las limitaciones en tamaño, consumo de energía y la necesidaddeprogramación manual marcaron un inicio desafiantepara la evoluciónde las computadoras
 
 ### Segunda Generación: Transistores
-**Avance Crucial: Transistores**<br>
+**Avance Crucial: Transistores:**<br>
 La introducción de los transistores marcó una nueva era en la revolución de las computadoras, con reducción de tamaño y mayor eficiencia en comparación con las antiguas máquinas de tubos de vacío
 
 **Implicaciones en Alimentamiento**<br>
