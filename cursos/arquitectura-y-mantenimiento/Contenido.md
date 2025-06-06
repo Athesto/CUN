@@ -1,11 +1,12 @@
+[TOC]
 ## Contenido 1: Historia y Evolución de lasComputadoras:
 > Un Viaje Fascinante a través de las Generaciones Tecnológicas
 
-Esta presentación se sumerge en la historia y evoluciónde las computadoras, desde lasprimeras máquinas mecánicas hasta las innovadoras computadoras cuánticasde la actualidad. Exploraremos las distintasgeneraciones y su impacto en la ingenieríade sistemas, revelando cómo cada avance tecnológico hamoldeado el mundo de la informática
+Esta presentación se sumerge en la historia y evoluciónde las computadoras, desde las primeras máquinas mecánicas hasta las innovadoras computadoras cuánticasde la actualidad. Exploraremos las distintasgeneraciones y su impacto en la ingenieríade sistemas, revelando cómo cada avance tecnológico hamoldeado el mundo de la informática
 
 ### Primera Generación: Tubos de Vacío
-**ENIAC y las Primeras Computadoras**<br>
-La primerageneraciónde computadoras introdujo las máquinasbasadas en tubosde vacío, como elfamoso ENIAC. Estas máquinasocupabangrandes espacios y requeríanprogramaciónmanual.
+#### ENIAC y las Primeras Computadoras
+La primera generación de computadoras introdujo las máquinas basadas en tubos de vacío, como el famoso ENIAC. Estas máquinas ocupaban grandes espacios y requerían programación manual.
 
 **Limitaciones y Desafíos**<br>
 Las limitaciones en tamaño, consumo de energía y la necesidaddeprogramación manual marcaron un inicio desafiantepara la evoluciónde las computadoras
