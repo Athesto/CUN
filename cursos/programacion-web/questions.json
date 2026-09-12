@@ -9,7 +9,7 @@
     ],
     "correctAnswer": 0,
     "explanation": "HTML define la estructura y el significado del contenido; no es un lenguaje de programación para implementar lógica.",
-    "source": "S2-30:15"
+    "source": "Sesión-2-30:15"
   },
   {
     "question": "En el modelo cliente-servidor, ¿qué sucede después de que el cliente realiza una petición?",
@@ -21,7 +21,7 @@
     ],
     "correctAnswer": 1,
     "explanation": "La comunicación web es bidireccional: el cliente envía una petición, el servidor la procesa y devuelve una respuesta.",
-    "source": "S3-26:59"
+    "source": "Sesión-3-26:59"
   },
   {
     "question": "¿Qué ocurre normalmente con los datos de un formulario enviado mediante GET?",
@@ -33,7 +33,7 @@
     ],
     "correctAnswer": 2,
     "explanation": "GET incorpora los datos enviados como parámetros de la URL, por lo que pueden verse en la barra de direcciones.",
-    "source": "S3-42:08"
+    "source": "Sesión-3-42:08"
   },
   {
     "question": "¿Qué tecnología se utiliza principalmente para controlar la presentación visual de una página web?",
@@ -45,7 +45,7 @@
     ],
     "correctAnswer": 1,
     "explanation": "CSS define aspectos de presentación como colores, espacios, tipografía y adaptación a distintos tamaños de pantalla.",
-    "source": "S4-Integración HTML/CSS/JavaScript"
+    "source": "Sesión-4-Integración HTML/CSS/JavaScript"
   },
   {
     "question": "¿Qué aporta JavaScript a una página web?",
@@ -57,6 +57,6 @@
     ],
     "correctAnswer": 2,
     "explanation": "JavaScript permite responder a eventos, modificar la página y ejecutar lógica en el navegador, complementando a HTML y CSS.",
-    "source": "S2-Introducción a JavaScript"
+    "source": "Sesión-2-Introducción a JavaScript"
   }
 ]
