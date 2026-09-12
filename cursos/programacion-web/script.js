@@ -43,9 +43,15 @@ async function loadQuestions() {
   }
 }
 
-// Baraja una copia del banco y selecciona cinco preguntas para cada intento.
+// Baraja el banco, evita las preguntas del intento anterior y toma las primeras cinco.
 function selectQuestions() {
-  const shuffled = [...questionBank];
+  const previousQuestions = new Set(questions);
+  const availableQuestions = questionBank.filter(
+    (question) => !previousQuestions.has(question),
+  );
+  const selectionPool =
+    availableQuestions.length >= QUIZ_SIZE ? availableQuestions : questionBank;
+  const shuffled = [...selectionPool];
 
   for (let index = shuffled.length - 1; index > 0; index -= 1) {
     const randomIndex = Math.floor(Math.random() * (index + 1));
