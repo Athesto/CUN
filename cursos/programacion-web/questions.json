@@ -1,0 +1,62 @@
+[
+  {
+    "question": "¿Cuál es la función principal de HTML en una página web?",
+    "options": [
+      "Estructurar el contenido",
+      "Aplicar estilos visuales",
+      "Ejecutar consultas de base de datos",
+      "Administrar el servidor"
+    ],
+    "correctAnswer": 0,
+    "explanation": "HTML define la estructura y el significado del contenido; no es un lenguaje de programación para implementar lógica.",
+    "source": "S2-30:15"
+  },
+  {
+    "question": "En el modelo cliente-servidor, ¿qué sucede después de que el cliente realiza una petición?",
+    "options": [
+      "El navegador se cierra",
+      "El servidor evalúa la petición y devuelve una respuesta",
+      "CSS procesa la petición",
+      "HTML almacena los datos permanentemente"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La comunicación web es bidireccional: el cliente envía una petición, el servidor la procesa y devuelve una respuesta.",
+    "source": "S3-26:59"
+  },
+  {
+    "question": "¿Qué ocurre normalmente con los datos de un formulario enviado mediante GET?",
+    "options": [
+      "Se ocultan dentro de CSS",
+      "Se eliminan antes de llegar al servidor",
+      "Aparecen como parámetros en la URL",
+      "Solo se guardan en JavaScript"
+    ],
+    "correctAnswer": 2,
+    "explanation": "GET incorpora los datos enviados como parámetros de la URL, por lo que pueden verse en la barra de direcciones.",
+    "source": "S3-42:08"
+  },
+  {
+    "question": "¿Qué tecnología se utiliza principalmente para controlar la presentación visual de una página web?",
+    "options": [
+      "HTML",
+      "CSS",
+      "SQL",
+      "HTTP"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CSS define aspectos de presentación como colores, espacios, tipografía y adaptación a distintos tamaños de pantalla.",
+    "source": "S4-Integración HTML/CSS/JavaScript"
+  },
+  {
+    "question": "¿Qué aporta JavaScript a una página web?",
+    "options": [
+      "Únicamente estructura semántica",
+      "Solo estilos y colores",
+      "Interactividad y lógica ejecutada en el navegador",
+      "Un reemplazo obligatorio para HTML"
+    ],
+    "correctAnswer": 2,
+    "explanation": "JavaScript permite responder a eventos, modificar la página y ejecutar lógica en el navegador, complementando a HTML y CSS.",
+    "source": "S2-Introducción a JavaScript"
+  }
+]
