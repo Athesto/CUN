@@ -9,7 +9,7 @@
     ],
     "correctAnswer": 0,
     "explanation": "HTML define la estructura y el significado del contenido; no es un lenguaje de programación para implementar lógica.",
-    "source": "Sesión-2-30:15"
+    "source": "Sesión 2, minuto 30:15"
   },
   {
     "question": "En el modelo cliente-servidor, ¿qué sucede después de que el cliente realiza una petición?",
@@ -21,7 +21,7 @@
     ],
     "correctAnswer": 1,
     "explanation": "La comunicación web es bidireccional: el cliente envía una petición, el servidor la procesa y devuelve una respuesta.",
-    "source": "Sesión-3-26:59"
+    "source": "Sesión 3, minuto 26:59"
   },
   {
     "question": "¿Qué ocurre normalmente con los datos de un formulario enviado mediante GET?",
@@ -33,7 +33,7 @@
     ],
     "correctAnswer": 2,
     "explanation": "GET incorpora los datos enviados como parámetros de la URL, por lo que pueden verse en la barra de direcciones.",
-    "source": "Sesión-3-42:08"
+    "source": "Sesión 3, minuto 42:08"
   },
   {
     "question": "¿Qué tecnología se utiliza principalmente para controlar la presentación visual de una página web?",
@@ -45,7 +45,7 @@
     ],
     "correctAnswer": 1,
     "explanation": "CSS define aspectos de presentación como colores, espacios, tipografía y adaptación a distintos tamaños de pantalla.",
-    "source": "Sesión-4-Integración HTML/CSS/JavaScript"
+    "source": "Sesión 5, minuto 20:12"
   },
   {
     "question": "¿Qué aporta JavaScript a una página web?",
@@ -57,6 +57,90 @@
     ],
     "correctAnswer": 2,
     "explanation": "JavaScript permite responder a eventos, modificar la página y ejecutar lógica en el navegador, complementando a HTML y CSS.",
-    "source": "Sesión-2-Introducción a JavaScript"
+    "source": "Sesión 6, minuto 28:04"
+  },
+  {
+    "question": "¿Por qué HTML no se considera un lenguaje de programación?",
+    "options": [
+      "Porque solo funciona sin navegador",
+      "Porque estructura contenido, pero no implementa lógica de programación",
+      "Porque únicamente sirve para crear bases de datos",
+      "Porque es una versión antigua de JavaScript"
+    ],
+    "correctAnswer": 1,
+    "explanation": "HTML es un lenguaje de marcado: describe y organiza el contenido que interpreta el navegador, pero no expresa lógica de programación.",
+    "source": "Sesión 2, minuto 30:28"
+  },
+  {
+    "question": "¿Qué significa que HTML sea un estándar viviente?",
+    "options": [
+      "Que solo puede utilizarse en páginas nuevas",
+      "Que cambia automáticamente el código del usuario",
+      "Que continúa evolucionando junto con las capacidades de los navegadores",
+      "Que necesita conexión permanente a internet"
+    ],
+    "correctAnswer": 2,
+    "explanation": "HTML se mantiene y actualiza de forma continua para acompañar la evolución de la Web y de los navegadores.",
+    "source": "Sesión 2, minuto 54:19"
+  },
+  {
+    "question": "¿Por qué se dice que un formulario permite comunicación bidireccional?",
+    "options": [
+      "Porque utiliza dos hojas de estilos",
+      "Porque el cliente envía datos y recibe una respuesta del servidor",
+      "Porque abre dos ventanas del navegador",
+      "Porque permite seleccionar dos opciones"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El usuario envía información desde el cliente; el servidor la procesa y devuelve una respuesta, formando un intercambio en ambos sentidos.",
+    "source": "Sesión 3, minuto 27:29"
+  },
+  {
+    "question": "¿Qué significan las siglas CSS?",
+    "options": [
+      "Creative Style System",
+      "Cascading Style Sheets",
+      "Computer Structured Syntax",
+      "Content Server Styles"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CSS significa Cascading Style Sheets, en español hojas de estilo en cascada.",
+    "source": "Sesión 5, minuto 20:52"
+  },
+  {
+    "question": "¿Qué concepto de CSS explica el contenido, relleno, borde y margen de un elemento?",
+    "options": [
+      "El modelo de cajas",
+      "La comunicación cliente-servidor",
+      "El árbol del DOM",
+      "El método GET"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El modelo de cajas representa cada elemento mediante contenido, padding, borde y margen, y ayuda a comprender su tamaño y espaciado.",
+    "source": "Sesión 5, minuto 40:56"
+  },
+  {
+    "question": "¿Dónde se ejecuta JavaScript cuando se habla de programación del lado del cliente?",
+    "options": [
+      "En la base de datos",
+      "Dentro del navegador del usuario",
+      "Únicamente en el servidor web",
+      "En la hoja de estilos"
+    ],
+    "correctAnswer": 1,
+    "explanation": "En la programación del lado del cliente, JavaScript se ejecuta en el navegador y puede responder inmediatamente a las acciones del usuario.",
+    "source": "Sesión 6, minuto 28:04"
+  },
+  {
+    "question": "¿Cuál relación describe correctamente las tres tecnologías principales del frontend?",
+    "options": [
+      "HTML diseña, CSS programa y JavaScript almacena",
+      "HTML estructura, CSS presenta y JavaScript aporta comportamiento",
+      "HTML consulta, CSS responde y JavaScript dibuja",
+      "Las tres tecnologías cumplen exactamente la misma función"
+    ],
+    "correctAnswer": 1,
+    "explanation": "HTML aporta la estructura, CSS controla la presentación visual y JavaScript incorpora comportamiento e interactividad.",
+    "source": "Sesión 6, minuto 1:03:46"
   }
 ]

@@ -17,6 +17,8 @@ const resultTitle = document.querySelector("#result-title");
 const resultText = document.querySelector("#result-text");
 const restartButton = document.querySelector("#restart-button");
 
+const QUIZ_SIZE = 5;
+let questionBank = [];
 let questions = [];
 let currentIndex = 0;
 let score = 0;
@@ -26,9 +28,10 @@ async function loadQuestions() {
   try {
     const response = await fetch("questions.json");
     if (!response.ok) throw new Error(`Error HTTP ${response.status}`);
-    questions = await response.json();
-    if (!Array.isArray(questions) || questions.length === 0)
+    questionBank = await response.json();
+    if (!Array.isArray(questionBank) || questionBank.length === 0)
       throw new Error("No hay preguntas disponibles");
+    selectQuestions();
     loading.hidden = true;
     quizPanel.hidden = false;
     showQuestion();
@@ -38,6 +41,21 @@ async function loadQuestions() {
       "<strong>No se pudieron cargar las preguntas.</strong><br>Abre esta carpeta desde un servidor local para permitir que fetch() lea questions.json.";
     console.error(error);
   }
+}
+
+// Baraja una copia del banco y selecciona cinco preguntas para cada intento.
+function selectQuestions() {
+  const shuffled = [...questionBank];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[index],
+    ];
+  }
+
+  questions = shuffled.slice(0, Math.min(QUIZ_SIZE, shuffled.length));
 }
 
 function showQuestion() {
@@ -119,6 +137,7 @@ function showResult() {
 restartButton.addEventListener("click", () => {
   currentIndex = 0;
   score = 0;
+  selectQuestions();
   resultPanel.hidden = true;
   quizPanel.hidden = false;
   showQuestion();

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title description">
+  <title id="title">Educación digital</title>
+  <desc id="description">Paisaje nocturno que representa el aprendizaje de programación web.</desc>
+  <rect width="640" height="360" rx="24" fill="#102d35"/>
+  <circle cx="500" cy="84" r="48" fill="#fff0bd"/>
+  <path d="M0 290 130 170l90 70 110-130 105 130 70-60 135 110v70H0z" fill="#255348"/>
+  <path d="M0 315c110-42 190 35 300-5s190-18 340 20v30H0z" fill="#2f7d78"/>
+  <path d="M0 338c125-26 220 18 330-8s205-4 310 14v16H0z" fill="#65c9ba"/>
+  <text x="38" y="82" fill="#d7a84e" font-family="sans-serif" font-size="22" font-weight="bold">EDUCACIÓN DIGITAL</text>
+  <text x="38" y="128" fill="#c9eee0" font-family="sans-serif" font-size="32">Explora la web</text>
+</svg>
