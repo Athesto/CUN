@@ -37,8 +37,11 @@ async function loadQuestions() {
     showQuestion();
   } catch (error) {
     loading.classList.add("error");
-    loading.innerHTML =
-      "<strong>No se pudieron cargar las preguntas.</strong><br>Abre esta carpeta desde un servidor local para permitir que fetch() lea questions.json.";
+    loading.innerHTML = [
+      "<strong>No se pudieron cargar las preguntas.</strong><br>",
+      "Abre esta carpeta desde un servidor local para permitir que fetch() ",
+      "lea questions.json.",
+    ].join("");
     console.error(error);
   }
 }
