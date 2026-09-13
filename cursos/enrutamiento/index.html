@@ -69,15 +69,16 @@
   <h1>Cisco Config Generator</h1>
 
   <label for="template">TEMPLATE</label>
-  <textarea id="template" spellcheck="false">hostname {{HOSTNAME}}
-ip domain-name {{DOMAIN}}
+  <small>Usa {{VARIABLE=valor por defecto}} o {{BLOCK:VARIABLE}}.</small>
+  <textarea id="template" spellcheck="false">hostname {{HOSTNAME=R1-BOGOTA}}
+ip domain-name {{DOMAIN=empresa.local}}
 
 interface Loopback0
- ip address {{ROUTER_ID}} 255.255.255.255
+ ip address {{ROUTER_ID=1.1.1.1}} 255.255.255.255
 
 interface GigabitEthernet0/0
  description LAN
- ip address {{PREFIX}}.1 255.255.255.0
+ ip address {{PREFIX=192.168.10}}.1 255.255.255.0
  no shutdown
 
 {{BLOCK:VLANS}}
@@ -105,11 +106,15 @@ router ospf 1
     function findVariables(text) {
       const found = [];
       const seen = new Set();
-      const pattern = /{{\s*(?:(BLOCK)\s*:\s*)?([A-Za-z_][A-Za-z0-9_]*)\s*}}/g;
+      const pattern = /{{\s*(?:(BLOCK)\s*:\s*)?([A-Za-z_][A-Za-z0-9_]*)(?:\s*=\s*([^{}]*?))?\s*}}/g;
       let match;
 
       while ((match = pattern.exec(text)) !== null) {
-        const item = { name: match[2], block: Boolean(match[1]) };
+        const item = {
+          name: match[2],
+          block: Boolean(match[1]),
+          defaultValue: match[3] === undefined ? '' : match[3].trim()
+        };
         if (!seen.has(item.name)) {
           seen.add(item.name);
           found.push(item);
@@ -120,7 +125,7 @@ router ospf 1
 
     function render() {
       result.value = template.value.replace(
-        /{{\s*(?:(BLOCK)\s*:\s*)?([A-Za-z_][A-Za-z0-9_]*)\s*}}/g,
+        /{{\s*(?:(BLOCK)\s*:\s*)?([A-Za-z_][A-Za-z0-9_]*)(?:\s*=\s*([^{}]*?))?\s*}}/g,
         (_, block, name) => values.get(name) || ''
       );
     }
@@ -140,7 +145,9 @@ router ospf 1
         field.dataset.variable = item.name;
         field.spellcheck = false;
         if (item.block) field.className = 'block-input';
-        field.value = previousValues.get(item.name) || '';
+        field.value = previousValues.has(item.name)
+          ? previousValues.get(item.name)
+          : item.defaultValue;
         values.set(item.name, field.value);
 
         field.addEventListener('input', () => {
